@@ -35,6 +35,7 @@ class BuukingInfoContainer extends StatelessWidget {
           children: [
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,9 +53,6 @@ class BuukingInfoContainer extends StatelessWidget {
                           color: AppColors.darkGreyColor),
                     )
                   ],
-                ),
-                SizedBox(
-                  width: 27.w,
                 ),
                 Icon(
                   icon,

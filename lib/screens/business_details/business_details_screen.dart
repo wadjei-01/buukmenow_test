@@ -1,5 +1,4 @@
 import 'package:buukme_test/core/res/app_colors.dart';
-import 'package:buukme_test/core/themes/text_theme.dart';
 import 'package:buukme_test/data/model/registered_business.dart';
 import 'package:buukme_test/screens/business_details/components/business_details_labelledtext.dart';
 import 'package:buukme_test/screens/business_details/components/buuking_info_container.dart';
@@ -76,31 +75,34 @@ class BusinessDetailsScreen extends StatelessWidget {
                           ]),
                     ))),
             SliverToBoxAdapter(
-              child: SizedBox(
-                height: 184.h,
+              child: IntrinsicHeight(
                 child: Row(
+                  mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    IntrinsicHeight(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          BuukingInfoContainer(
-                            label: 'Total buukings',
-                            icon: Iconsax.note_text,
-                            value: business.buukingsTotalCount,
-                          ),
-                          SizedBox(
-                            height: 12.h,
-                          ),
-                          BuukingInfoContainer(
-                            label: 'Paid buukings',
-                            icon: Iconsax.note_text,
-                            value: business.buukingsPaidCount,
-                          ),
-                        ],
-                      ),
-                    ),
+                    Expanded(
+                        child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        BuukingInfoContainer(
+                          label: 'Total buukings',
+                          icon: Iconsax.note_text,
+                          value: business.buukingsTotalCount,
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 19.82.w, vertical: 20.h),
+                        ),
+                        SizedBox(
+                          height: 12.h,
+                        ),
+                        BuukingInfoContainer(
+                          label: 'Paid buukings',
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 19.82.w, vertical: 20.h),
+                          icon: Iconsax.note_text,
+                          value: business.buukingsPaidCount,
+                        ),
+                      ],
+                    )),
                     SizedBox(
                       width: 12.w,
                     ),
@@ -115,7 +117,7 @@ class BusinessDetailsScreen extends StatelessWidget {
                             text: 'See all',
                             fontSize: 12.sp,
                           )),
-                    )
+                    ),
                   ],
                 ),
               ),
