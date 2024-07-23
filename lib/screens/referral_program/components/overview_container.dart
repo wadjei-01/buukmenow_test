@@ -103,7 +103,10 @@ class OverviewSection extends StatelessWidget {
             Text(
               label,
               style: AppTypography.bodyTwo.copyWith(
-                  fontWeight: FontWeight.w400, color: AppColors.lightGreyColor),
+                  fontWeight: FontWeight.w400,
+                  color: AppColors.lightGreyColor,
+                  overflow: TextOverflow.ellipsis),
+              maxLines: 1,
             ),
           ],
         ),

@@ -1,4 +1,3 @@
-import 'package:buukme_test/core/res/app_colors.dart';
 import 'package:buukme_test/data/model/registered_business.dart';
 import 'package:buukme_test/screens/business_details/components/business_details_labelledtext.dart';
 import 'package:buukme_test/screens/business_details/components/buuking_info_container.dart';
