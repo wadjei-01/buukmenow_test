@@ -43,10 +43,12 @@ class RegisteredBusinessListView extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      ContactInfo(
-                        icon: Iconsax.user,
-                        title: 'Owner',
-                        value: business.ownerName,
+                      Expanded(
+                        child: ContactInfo(
+                          icon: Iconsax.user,
+                          title: 'Owner',
+                          value: business.ownerName,
+                        ),
                       ),
                       Container(
                           margin: EdgeInsets.symmetric(horizontal: 12.w),
@@ -54,10 +56,12 @@ class RegisteredBusinessListView extends StatelessWidget {
                           child: VerticalDivider(
                             width: 2.sp,
                           )),
-                      ContactInfo(
-                        icon: Iconsax.call,
-                        title: 'Mobile',
-                        value: business.ownerPhoneNo,
+                      Expanded(
+                        child: ContactInfo(
+                          icon: Iconsax.call,
+                          title: 'Mobile',
+                          value: business.ownerPhoneNo,
+                        ),
                       ),
                     ],
                   ),
